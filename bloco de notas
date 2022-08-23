@@ -1,0 +1,122 @@
+1 - instalar o git	
+2 - instalar o mode
+3 - instalar o insomnia
+
+npm init
+npm i express
+npm i nodemon
+-------------------------------------
+
+const express = require("express")
+const app = express()
+
+app.get('/', (req, res)=>{
+   res.send('voce acionou a rota /')
+})
+
+app.get('/soma', (req, res)=>{
+   res.send('voce acionou a rota /')
+})
+
+console.log('Orion')
+
+app.listen(7777, () => {
+    console.log('Servidor UP')
+})
+
+-------------------------------------
+
+como usar if e else
+
+let aprovacao = 0 //let faz com que vc pode modificar a a const
+
+    if(media < 5 && media >= 3){
+        aprovacao = 'RECUPERAÇÃO'
+    }
+    else if(media < 3){
+        aprovacao = 'REPROVADO'
+    }
+    else{
+        aprovacao = 'APROVADO'
+    }
+
+------------------------------------
+
+const express = require("express")
+const app = express()
+
+app.get('/', (req, res)=>{
+   res.send('rota principal /')
+})
+
+app.get('/objeto', (req, res)=>{
+
+const carroArray = [
+    {
+        marca:'2',
+        modelo:'gol',
+        cor:'branco',
+        placa:'jgf 9972',
+        ano:'2020'
+    }
+    
+
+]
+
+const carro = 
+{
+    marca:'2',
+    modelo:'gol',
+    cor:'branco',
+    placa:'jgf 9972',
+    ano:'2020'
+}
+
+   res.json(carroArray)
+})
+app.listen(7777, ()=>{
+    console.log('servidor rodando em http://127.0.0.1:7777')
+})
+
+
+----------------------------------------------
+
+const express = require("express")
+const app = express()
+
+
+})
+
+app.get('/media', (req, res)=>{
+
+    const n1 = 8
+    const n2 = 8
+    const n3 = 8
+    const n4 = 9
+
+    const soma = n1 + n2 + n3 + n4
+    const media = soma / 4
+
+    const resposta = {
+        soma:soma,
+        media:media,
+    }
+  if(media< 5){
+      resposta.resultado = "reprovado"
+  }else if(media <7){
+      resposta.resultado = "em recuperação ,ainda a tempo"
+  }else if(media<=10 ){
+      resposta.resultado = "aprovado"
+  }else{
+      resposta.resultado = "não é possivel media maior que 10"
+  }
+  
+  res.json(resposta)
+    })
+
+app.listen(7777, ()=>{
+    console.log('servidor rodando em http://127.0.0.1:7777')
+})
+
+
+--------------------------------------------
